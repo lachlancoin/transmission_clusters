@@ -70,7 +70,7 @@ library(readxl)
   label = subset(mtch, Value=="label")
   
   g1 <- igraph::graph_from_data_frame(edges3, directed=FALSE, vertices=vertices)
-  gg = ggraph(g1, layout = 'kk') +
+  gg = ggraph(g1, layout = 'fr') +
     #geom_edge_fan()+
     geom_edge_fan(aes(color = dist)) + 
     geom_node_point(size=3, aes_string( shape=shape$Key,color=color$Key)) +
